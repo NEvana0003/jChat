@@ -13,3 +13,5 @@
 - Hide bots messages (on/off)
 - Hide commands messages (on/off)
 - !refreshoverlay to make newly added emotes appear (mods only)
+
+forked by NEvana
