@@ -240,7 +240,7 @@ function badgesUpdate(event) {
 function generateURL(event) {
     event.preventDefault();
 
-    var generatedUrl = 'https://www.giambaj.it/twitch/jchat/v2/?channel=' + $channel.val();
+    var generatedUrl = 'https://chat.nevana.xyz/v2/?channel=' + $channel.val();
     if ($animate.is(':checked')) generatedUrl += '&animate=true';
     if ($bots.is(':checked')) generatedUrl += '&bots=true';
     if ($fade_bool.is(':checked')) generatedUrl += '&fade=' + $fade.val();
