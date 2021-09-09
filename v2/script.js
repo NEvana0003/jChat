@@ -215,6 +215,13 @@ Chat = {
                         href: "styles/font_Wallpoet.css"
                     }).appendTo("head");
                     break;
+                case 12:
+                    $("<link/>", {
+                        rel: "stylesheet",
+                        type: "text/css",
+                        href: "styles/font_Minecraft.css"
+                    }).appendTo("head");
+                    break;
                 default:
                     $("<link/>", {
                         rel: "stylesheet",

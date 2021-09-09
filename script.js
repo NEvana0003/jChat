@@ -137,6 +137,14 @@ function fontUpdate(event) {
                 href: "styles/font_Wallpoet.css"
             }).appendTo("head");
             break;
+        case '12':
+            $("<link/>", {
+                rel: "stylesheet",
+                type: "text/css",
+                class: "font",
+                href: "styles/font_Minecraft.css"
+            }).appendTo("head");
+            break;
     }
 }
 

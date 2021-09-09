@@ -1,0 +1,8 @@
+#chat_container {
+    font-family: "minecraft";
+}
+
+@font-face {
+    font-family: "minecraft";
+    src: url("../../fonts/minecraft.otf");
+}
