@@ -346,7 +346,7 @@ Chat = {
                         Chat.info.seventvBadges = [];
                     });
 
-                $.getJSON('./chatterino.json')
+                $.getJSON('https://api.chatterino.com/badges')
                     .done(function(res) {
                         Chat.info.chatterinoBadges = res.badges;
                     })
