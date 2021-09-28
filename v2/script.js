@@ -694,7 +694,7 @@ Chat = {
                             if (message.params[0] !== '#' + channel || !message.params[1]) return;
                             var nick = message.prefix.split('@')[0].split('!')[0];
 
-                            if (message.params[1].toLowerCase() === "!refreshoverlay" && typeof(message.tags.badges) === 'string') {
+                            if (message.params[1].toLowerCase() === "GuysRefreshChatterinoIUploadedAnotherEmote" && typeof(message.tags.badges) === 'string') {
                                 var flag = false;
                                 message.tags.badges.split(',').forEach(badge => {
                                     badge = badge.split('/');
