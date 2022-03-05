@@ -11,7 +11,8 @@ const fonts = [
     'IndieFlower',
     'PressStart2P',
     'Wallpoet',
-    'Minecraft'
+    'Minecraft',
+    "VCR"
 ];
 
 const sizes = [

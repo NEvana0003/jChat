@@ -1,0 +1,8 @@
+#example {
+    font-family: "VCR"
+}
+
+@font-face {
+    font-family: "VCR";
+    src: url("../fonts/vcr.otf");
+}
