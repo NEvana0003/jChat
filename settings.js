@@ -12,7 +12,8 @@ const fonts = [
     'PressStart2P',
     'Wallpoet',
     'Minecraft',
-    "VCR"
+    "VCR",
+    "verdana"
 ];
 
 const sizes = [

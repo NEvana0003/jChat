@@ -44,8 +44,8 @@ function escapeHtml(message) {
 function myAPI(url) {
     return $.ajax({
         beforeSend: function(request) {
-            request.setRequestHeader("Client-Id", "p31p8buadkrrel3fdzq7268cq6q7li");
-            request.setRequestHeader("Authorization", "Bearer natft60poc07wp82wr3r1egzm6gckg");
+            request.setRequestHeader("Client-Id", "i4yr1znz00t7v927pc29jqkla9jel9");
+            request.setRequestHeader("Authorization", "Bearer c93h4lxxb48nwgmlkls0649wntkn0q");
         },
         dataType: "json",
         url: "https://api.twitch.tv/helix" + url
@@ -240,27 +240,34 @@ Chat = {
                         href: "styles/font_Wallpoet.css"
                     }).appendTo("head");
                     break;
-                case 12:
-                    $("<link/>", {
-                        rel: "stylesheet",
-                        type: "text/css",
-                        href: "styles/font_Minecraft.css"
-                    }).appendTo("head");
-                    break;
+                    case 12:
+                        $("<link/>", {
+                            rel: "stylesheet",
+                            type: "text/css",
+                            href: "styles/font_Minecraft.css"
+                        }).appendTo("head");
+                        break;
                     case 13:
-                $("<link/>", {
-                    rel: "stylesheet",
-                    type: "text/css",
-                    href: "styles/font_VCR.css"
-                }).appendTo("head");
-                break;
-                default:
                     $("<link/>", {
                         rel: "stylesheet",
                         type: "text/css",
-                        href: "styles/font_BalooTammudu.css"
+                        href: "styles/font_VCR.css"
                     }).appendTo("head");
                     break;
+                    case 14:
+                    $("<link/>", {
+                        rel: "stylesheet",
+                        type: "text/css",
+                        href: "styles/font_verdana.css"
+                    }).appendTo("head");
+                    break;
+                    default:
+                        $("<link/>", {
+                            rel: "stylesheet",
+                            type: "text/css",
+                            href: "styles/font_BalooTammudu.css"
+                        }).appendTo("head");
+                        break;
             }
 
             if (Chat.info.stroke) {
@@ -761,6 +768,20 @@ Chat = {
                                     Chat.loadEmotes(Chat.info.channelID);
                                     console.log('jChat: Refreshing emotes...');
                                     return;
+                                }
+                            }
+
+                            if (message.params[1].toLowerCase() === "!reloadchat" && typeof(message.tags.badges) === 'string') {
+                                var flag = false;
+                                message.tags.badges.split(',').forEach(badge => {
+                                    badge = badge.split('/');
+                                    if (badge[0] === "moderator" || badge[0] === "broadcaster") {
+                                        flag = true;
+                                        return;
+                                    }
+                                });
+                                if (flag) {
+                                    location.reload();
                                 }
                             }
 
